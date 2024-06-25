@@ -7,7 +7,6 @@ from typing import Union
 from json import dump
 from amazoncaptcha import AmazonCaptcha
 from bs4 import BeautifulSoup
-from dotenv import load_dotenv
 from selenium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
@@ -285,7 +284,6 @@ def scrap_from_amazon(asin_number: str):
 
 
 if __name__ == "__main__":
-    load_dotenv()
     asins = [
         "B0C88FHVFV"
     ]
