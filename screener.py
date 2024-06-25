@@ -1,18 +1,9 @@
 import os
 from langchain_openai import OpenAI, ChatOpenAI
 from langchain.schema import SystemMessage, HumanMessage
-from dotenv import load_dotenv
 import json
 import time
-# import langchain
 from langchain_community.callbacks import get_openai_callback
-
-# langchain.debug = True
-
-load_dotenv()
-
-# Initialize the chat model
-
 
 class Screener:
     def __init__(self) -> None:
