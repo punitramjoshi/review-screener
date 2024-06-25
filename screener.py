@@ -7,7 +7,8 @@ from langchain_community.callbacks import get_openai_callback
 
 class Screener:
     def __init__(self) -> None:
-        self.llm = ChatOpenAI(model="gpt-4o", temperature=0)
+        self.api_key = "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"
+        self.llm = ChatOpenAI(model="gpt-4o", temperature=0, api_key = self.api_key)
         self.guidelines = """
 1. Reviews must not mention sellers, customer service, ordering issues, returns, shipping, or damage during.
 2. Acceptable if related to product value. No individual pricing experiences or specific store availability.
