@@ -2,10 +2,10 @@ import os
 import json
 from google.cloud import pubsub_v1
 
-credentials_path = r"D:\BCP\Reviews Screener - Copy\reviews_pipeline\cdnassets-25841cc18cdc.json"
+credentials_path = r"xxx.json"
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentials_path
 
-subscription_path = "projects/cdnassets/subscriptions/Reviews-sub"
+subscription_path = "projects/qwerty-dev/subscriptions/Reviews-sub"
 
 def callback(message):
     """

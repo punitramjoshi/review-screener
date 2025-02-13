@@ -4,10 +4,10 @@ import requests
 from google.cloud import pubsub_v1
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-credentials_path = r"D:\BCP\Reviews Screener - Copy\reviews_pipeline\cdnassets-25841cc18cdc.json"
+credentials_path = r"xxx.json"
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = credentials_path
 
-topic_path = "projects/cdnassets/topics/Reviews"
+topic_path = "projects/qwerty-dev/topics/Reviews"
 publisher = pubsub_v1.PublisherClient()
 
 sku_list = []

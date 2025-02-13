@@ -4,10 +4,13 @@ from langchain.schema import SystemMessage, HumanMessage
 import json
 import time
 from langchain_community.callbacks import get_openai_callback
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 class Screener:
     def __init__(self) -> None:
-        self.api_key = "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"
+        self.api_key = os.getenv("OPENAI_API_KEY")
         self.llm = ChatOpenAI(model="gpt-4o", temperature=0, api_key = self.api_key)
         self.guidelines = """
 1. Reviews must not mention sellers, customer service, ordering issues, returns, shipping, or damage during.
